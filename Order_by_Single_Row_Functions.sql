@@ -2,7 +2,6 @@ SELECT * FROM scott.emp;
 SELECT * FROM EMP ORDER BY EMPNO desc;
 SELECT * FROM EMP ORDER BY ENAME;
 SELECT JOB , DEPTNO FROM EMP ORDER BY JOB asc, DEPTNO desc; -- Precedence given to first
-
 -- only for oracle
 -- LEVEL only works if we use CONNECT BY
 -- SELECT ENAME , LEVEL
