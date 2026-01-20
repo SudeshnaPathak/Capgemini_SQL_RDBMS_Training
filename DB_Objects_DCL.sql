@@ -2,7 +2,7 @@
 -- INDEX
 CREATE INDEX EMP_ENAME ON EMP(ENAME);
 SELECT index_name, table_name , uniqueness , index_type from user_indexes WHERE table_name = 'EMP';
-DROP INDEX EMP_ENAME ON EMP;
+DROP INDEX EMP_ENAME;
 
 -- DCL
 GRANT SELECT ON EMP TO HR; -- GRANT PERMISSION_TYPE ON TABLE_NAME TO USER
@@ -37,5 +37,6 @@ CACHE 8;       -- CACHE VALUE MUST BE LESS THAN ONE CYCLE SIZE
 
 SELECT emp_seq.NEXTVAL from Dual;
 SELECT emp_seq.CURRVAL from Dual;
+DROP SEQUENCE emp_seq;
 -- insert into emp values(emp_seq.NEXTVAL , "ABC", ...)
 
